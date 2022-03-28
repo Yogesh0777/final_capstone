@@ -1,5 +1,10 @@
 pipeline{
     agent any
+    environment { 
+        registry = "yogesh0707/final_capstone" 
+        registryCredential = '' 
+        dockerImage = '' 
+    }    
     tools { 
         maven 'maven3'
     }
