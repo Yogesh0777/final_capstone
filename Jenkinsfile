@@ -36,14 +36,13 @@ pipeline{
                     }
                 } 
             }
-            stage('Deploy Image') {
-                steps{
-                    script {
-                        docker.withRegistry( 'https://gcr.io', "gcr:${ID}" ) {
-                            dockerImage.push("$BUILD_NUMBER")
-                            dockerImage.push('latest')
+            stage('Deploy our image') { 
+                steps { 
+                    script { 
+                        docker.withRegistry( '', registryCredential ) { 
+                            dockerImage.push() 
                         }
-                    }
+                    } 
                 }
             }
 
