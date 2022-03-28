@@ -2,7 +2,7 @@ pipeline{
     agent any
     environment { 
         registry = "yogesh0707/final_capstone" 
-        registryCredential = 'Yog@9634' 
+        registryCredential = '' 
         dockerImage = '' 
     }    
     tools { 
