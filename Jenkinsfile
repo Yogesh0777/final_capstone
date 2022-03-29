@@ -52,7 +52,7 @@ pipeline{
                    remote.user = 'knoldus'
                    remote.password = 'knoldus'
                    remote.allowAnyHosts = true
-} 
+           } 
 
       }
 }
