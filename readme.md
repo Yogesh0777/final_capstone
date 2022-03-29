@@ -1,4 +1,4 @@
-hyy yogesh
+
 <h1 align="center">
   <br>
   <a><img src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/spring-framework.png" alt="spring boot"></a>
