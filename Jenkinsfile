@@ -45,6 +45,14 @@ pipeline{
                     } 
                 }
             }
-
+            1
+           stage("SSH Into k8s Server") {
+                  def remote = [:]
+                      remote.name = 'K8S master'
+                          remote.host = '127.0.0.1'
+                              remote.user = 'vagrant'
+                                  remote.password = 'vagrant'
+                                      remote.allowAnyHosts = true
+            } 
       }
 }
