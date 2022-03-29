@@ -45,5 +45,19 @@ pipeline{
                     } 
                 }
             }
+           
+            stage("Deploying")
+                 {
+                     steps
+                     {
+                         withKubeConfig([credentialsId: 'kubeconfig'])
+                         {
+                             sh 'pwd && ls'
+                             sh 'kubectl apply -f minikube/mongodb.yml'
+                             sh 'kubectl apply -f minikube/app.yml'
+                             sh 'kubectl apply -f minikube/nodeport.yml'
+                         }
+                     }
+                 }
       }
 }
